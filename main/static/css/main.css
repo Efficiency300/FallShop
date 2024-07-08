@@ -1,0 +1,372 @@
+body {
+    min-height: 172vw;
+    background-image: url('img/Main-bg.png'); /* Первое фоновое изображение */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+}
+
+
+
+
+.logo {
+    width: 300px;
+    height: 90px;
+    margin-top: 24px;
+    margin-left: 40px;
+
+
+
+}
+
+@font-face {
+    font-family: 'Refinery25Bold';
+    src: url(font/Refinery25Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.header-content-font {
+    font-family: 'Refinery25Bold', sans-serif;
+    font-weight: bold;
+    font-size: 68px;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 90%;
+    color: black;
+    position: static;
+    text-align: center;
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin-top: 158px;
+    margin-left: -80px;
+}
+
+.header-content-btn-container {
+    display: flex; /* Используем Flexbox для контейнера */
+    justify-content: flex-start; /* Выравнивание кнопок по началу */
+    align-items: center; /* Центровка кнопок по вертикали */
+    gap: 0; /* Расстояние между кнопками */
+    margin-left: 238px; /* Отступ слева */
+    margin-top: -150px;
+}
+
+.header-content-btn {
+    background-image: url("img/buttons.png");
+    background-repeat: no-repeat; /* Предотвращает повторение изображения */
+    background-position: center; /* Центрирует изображение */
+    background-size: cover; /* Масштабирует изображение, чтобы оно покрыло весь блок */
+    width: 251px; /* Ширина кнопки */
+    height: 51px; /* Высота кнопки */
+    display: flex; /* Используем Flexbox для центровки текста */
+    align-items: center; /* Вертикальная центровка текста */
+    justify-content: center; /* Горизонтальная центровка текста */
+    margin-left: 50px; /* Отрицательный левый отступ для уменьшения расстояния между кнопками */
+}
+
+.header-content-btn:first-child {
+    margin-left: 0; /* Убираем левый отступ у первой кнопки */
+}
+
+@font-face {
+    font-family: 'BlenderProBold';
+    src: url(font/BlenderProBold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.header-content-btn-font {
+    font-family: 'BlenderProBold', sans-serif;
+    margin: 0; /* Убираем отступы у текста */
+    color: black; /* Цвет текста */
+    font-weight: bold; /* Жирный текст */
+    font-size: 22px;
+}
+
+
+.header-content-imgs {
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 66px; /* Добавлено свойство gap для управления промежутками между элементами */
+        margin-left: -900px;
+        margin-top: 15px;
+
+}
+
+
+
+.header-content-imgs img {
+     width: 60px;
+     height: 60px;
+     object-fit: contain;
+
+}
+
+.header-container {
+    /*background-image: url(img/drop-down-menu.png);*/
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 0px;
+
+    width: 100%;
+    position: fixed;
+    top: 36px;
+    right: -1080px    ; /* Убедитесь, что панель тянется от левого края */
+    margin-right: 0; /* Убедитесь, что правый отступ не используется */
+    z-index: 1; /* Убедитесь, что панель находится поверх других элементов */
+}
+
+.header-content-dropdown button {
+    background-color: hsla(0, 0%, 16%, 0.5);
+    color: white;
+    padding: 10px 49px;
+
+    cursor: pointer;
+    font-family: 'BlenderProBold', sans-serif;
+    border: 2px solid #efb100;
+}
+
+.header-content-dropdown a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-family: 'BlenderProBold', sans-serif;
+}
+
+.header-content-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: hsla(0, 0%, 16%, 0.73);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+
+}
+
+.header-content-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-content-dropdown:hover button {
+    background-color: hsl(44, 100%, 47%);
+}
+
+.header-content-dropdown a:hover {
+    background-color: hsl(0, 0%, 0%);
+}
+.news-body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 250px; /* Adjust as needed */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.news-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px; /* Расстояние между .news-banner и .news */
+}
+
+.news-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.text-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+.news-text {
+    position: absolute;
+    top: 15px; /* Позиционирование текста над изображением */
+    left: 10%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #cbcbcb;
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.news-banner img {
+    height: 506px;
+    width: 900px;
+    border: 5px solid #efb100;
+    margin-top: 42px;
+}
+
+.news-caption {
+    margin-top: 5px;
+    color: #fffefe;
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрирование элементов */
+    gap: 40px; /* Расстояние между контейнерами видео */
+}
+
+.video-container {
+    position: relative;
+    width: 348px; /* Ширина контейнера видео */
+    height: 197px; /* Высота контейнера видео */
+    margin: 40px 0px; /* Отступы по X и Y */
+    text-align: center; /* Центрирование содержимого */
+}
+
+.video-container video {
+    width: 100%; /* Занимать всю ширину контейнера */
+    height: 100%; /* Занимать всю высоту контейнера */
+    object-fit: cover; /* Заполнение контейнера без искажения */
+}
+
+.video-container .news-text {
+    position: absolute; /* Абсолютное позиционирование для текста "NEWS_" */
+    top: -28px; /* Отступ сверху */
+    left: 92%; /* Центрирование по горизонтали */
+    transform: translateX(-50%);
+    color: #cbcbcb;
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Ширина текста на 100% контейнера */
+}
+
+.video-container .news-caption {
+    margin-top: 5px;
+    color: #fffefe;
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content-btn-yellow {
+    background-image: url(img/Yellow-button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 251px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px; /* Negative left margin to reduce space between buttons */
+    text-decoration: none; /* Remove underline from link */
+    color: #fff; /* Text color */
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-top: 140px;
+}
+
+
+.text-header h2{
+     font-family: 'Refinery25Bold', sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: inherit;
+    color: black;
+    margin-top: 150px;
+}
+.header-text-body {
+    text-align: center; /* Центрируем текст по горизонтали */
+}
+
+.header-text-body p {
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 120%;
+    font-weight: 400;
+    padding: 0;
+    box-sizing: border-box; /* Используем border-box для корректного учета padding и border в общей ширине элемента */
+    display: block;
+    text-align: center; /* Центрируем текст по горизонтали */
+    max-width: 744px; /* Задаем максимальную ширину */
+    height: 106px; /* Задаем высоту */
+    margin: 26px auto; /* Центрируем блок по горизонтали */
+
+}
+
+
+
+.img-border {
+    display: flex; /* Используем flexbox для расположения изображений в ряд */
+    gap: 0px; /* Задаем промежуток между изображениями (по желанию) */
+    justify-content: center;
+}
+
+.img-border img {
+    width: 450px; /* Задаем ширину изображения */
+    height: 650px; /* Задаем высоту изображения */
+    object-fit: cover; /* Опционально: сохраняем пропорции изображения, заполняя заданные размеры */
+    box-sizing: border-box;
+    border-bottom: 8px solid rgb(0, 0, 0);
+    border-left: 4px solid rgb(0, 0, 0);
+    border-right: 4px solid rgb(0, 0, 0);
+    border-top: 8px solid rgb(0, 0, 0);
+
+}
+
+.buy-button{
+    background-image: url(img/buttons.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 251px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 900px; /* Negative left margin to reduce space between buttons */
+    text-decoration: none; /* Remove underline from link */
+    color: #000000; /* Text color */
+    font-family: 'BlenderProBold', sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-top: 80px;
+}
+.footer img{
+    width: 1920px;
+    margin-top: 120px;
+}
